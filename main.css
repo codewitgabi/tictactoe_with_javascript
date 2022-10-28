@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	background: #84d9d4;
+}
+.title {
+	font-size: 1.9em;
+	font-weight: 500;
+	font-family: helvetica;
+	text-align: center;
+	margin: 2em 2em 1em 2em;
+}
+#current-player {
+	text-align: center;
+}
+.wrapper {
+	margin: 1em 15% 2em 15%;
+	background: blue;
+	padding-bottom: 0.8%;
+}
+.game-pad {
+	float: left;
+	width: 32%;
+	background: #fff;
+	margin: 1.2% 0 0 1%;
+	height: 80px;
+	font-size: 2em;
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#restart {
+	float: right;
+	padding: 10px;
+	margin-right: 15%;
+	background: blue;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 5px;
+}
