@@ -23,9 +23,18 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "Player 1 wins!!!";
 					resetBoard();
 					clearGamePads();
+					count = 0;
 					return;
 				}
-
+				else if (count == 8)
+				{
+					currentPlayer.textContent = "It's a draw!!!";
+					resetBoard();
+					clearGamePads();
+					count = 0;
+					return;
+				}
+				console.log(count);
 				currentPlayer.textContent = "Player 2";
 			} else {
 				this.textContent = "O";
@@ -38,9 +47,18 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "Player 2 wins!!!";
 					resetBoard();
 					clearGamePads();
+					count = 0;
 					return;
 				}
-
+				else if (count == 8)
+				{
+					currentPlayer.textContent = "It's a draw!!!";
+					resetBoard();
+					clearGamePads();
+					count = 0;
+					return;
+				}
+				console.log(count);
 				currentPlayer.textContent = "Player 1";
 			}
 			count++;
