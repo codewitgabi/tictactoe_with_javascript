@@ -34,7 +34,6 @@ for (let i = 0; i < gamePads.length; i++) {
 					count = 0;
 					return;
 				}
-				console.log(count);
 				currentPlayer.textContent = "Player 2";
 			} else {
 				this.textContent = "O";
@@ -58,11 +57,9 @@ for (let i = 0; i < gamePads.length; i++) {
 					count = 0;
 					return;
 				}
-				console.log(count);
 				currentPlayer.textContent = "Player 1";
 			}
 			count++;
-			//console.log(gameBoard);
 		}
 	});
 }
