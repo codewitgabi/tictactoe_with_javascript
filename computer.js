@@ -32,6 +32,7 @@ for (let i = 0; i < gamePads.length; i++) {
 					count = 0;
 					return;
 				}
+				// Computer makes his move here
 				computerMove();
 				
 				winner = checkWinner();
