@@ -23,6 +23,7 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "Player 1 wins!!!";
 					//resetBoard();
 					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
@@ -31,6 +32,7 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "It's a draw!!!";
 					//resetBoard();
 					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
@@ -46,6 +48,7 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "Player 2 wins!!!";
 					//resetBoard();
 					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
@@ -54,6 +57,7 @@ for (let i = 0; i < gamePads.length; i++) {
 					currentPlayer.textContent = "It's a draw!!!";
 					//resetBoard();
 					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
@@ -103,7 +107,20 @@ function clearGamePads () {
 	}
 }
 
+const disableGamePads = () => {
+    for (let i =0; i < gamePads.length; i++) {
+        gamePads[i].disabled = true;
+    }
+}
+
+const enableGamePads = () => {
+    for (let i =0; i < gamePads.length; i++) {
+        gamePads[i].disabled = false;
+    }
+}
+
 restartGame.addEventListener("click", () => {
 	resetBoard();
 	clearGamePads();
+	enableGamePads();
 });
