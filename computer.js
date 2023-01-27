@@ -21,47 +21,53 @@ for (let i = 0; i < gamePads.length; i++) {
 
 				if (winner !== undefined) {
 					currentPlayer.textContent = "Player 1 wins!!!";
-					//resetBoard();
-					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
 				else if (count == 8)
 				{
 					currentPlayer.textContent = "It's a draw!!!";
-					//resetBoard();
-					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
-				currentPlayer.textContent = "Player 2";
-			} else {
-				this.textContent = "O";
-				this.style.color = "blue";
-				gameBoard[this.id[0]][this.id[1]] = "O";
-
+				computerMove();
+				
 				winner = checkWinner();
-
+				
 				if (winner !== undefined) {
-					currentPlayer.textContent = "Player 2 wins!!!";
-					//resetBoard();
-					//clearGamePads();
+					currentPlayer.textContent = "Computer wins!!!";
+					disableGamePads();
 					count = 0;
 					return;
 				}
 				else if (count == 8)
 				{
 					currentPlayer.textContent = "It's a draw!!!";
-					//resetBoard();
-					//clearGamePads();
+					disableGamePads();
 					count = 0;
 					return;
 				}
-				currentPlayer.textContent = "Player 1";
 			}
-			count++;
+			count += 2;
 		}
 	});
+}
+
+function computerMove () {
+    let f = Math.round(Math.random() * 2);
+    let s = Math.round(Math.random() * 2);
+    let move = gameBoard[f][s];
+    while (typeof move == "string") {
+        f = Math.round(Math.random() * 2);
+        s = Math.round(Math.random() * 2);
+        move = gameBoard[f][s];
+    }
+    const pad = document.getElementById(`${f}${s}`)
+    pad.textContent = "O";
+    pad.style.color = "blue";
+    gameBoard[f][s] = "O";
 }
 
 function checkWinner () {
@@ -103,7 +109,20 @@ function clearGamePads () {
 	}
 }
 
+const disableGamePads = () => {
+    for (let i =0; i < gamePads.length; i++) {
+        gamePads[i].disabled = true;
+    }
+}
+
+const enableGamePads = () => {
+    for (let i =0; i < gamePads.length; i++) {
+        gamePads[i].disabled = false;
+    }
+}
+
 restartGame.addEventListener("click", () => {
 	resetBoard();
 	clearGamePads();
+	enableGamePads();
 });
