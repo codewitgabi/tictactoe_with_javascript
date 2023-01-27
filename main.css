@@ -3,7 +3,8 @@
 	padding: 0;
 }
 :root {
-	background: #84d9d4;
+	background: #27282c;
+	color: #fff;
 }
 .title {
 	font-size: 1.9em;
@@ -17,7 +18,7 @@
 }
 .wrapper {
 	margin: 1em 15% 2em 15%;
-	background: blue;
+	background: #fff;
 	padding-bottom: 0.8%;
 }
 .game-pad {
@@ -37,8 +38,8 @@
 	float: right;
 	padding: 10px;
 	margin-right: 15%;
-	background: blue;
+	background: #fff;
 	border: 2px solid #fff;
-	color: #fff;
+	color: red;
 	border-radius: 5px;
 }

@@ -21,16 +21,16 @@ for (let i = 0; i < gamePads.length; i++) {
 
 				if (winner !== undefined) {
 					currentPlayer.textContent = "Player 1 wins!!!";
-					resetBoard();
-					clearGamePads();
+					//resetBoard();
+					//clearGamePads();
 					count = 0;
 					return;
 				}
 				else if (count == 8)
 				{
 					currentPlayer.textContent = "It's a draw!!!";
-					resetBoard();
-					clearGamePads();
+					//resetBoard();
+					//clearGamePads();
 					count = 0;
 					return;
 				}
@@ -44,16 +44,16 @@ for (let i = 0; i < gamePads.length; i++) {
 
 				if (winner !== undefined) {
 					currentPlayer.textContent = "Player 2 wins!!!";
-					resetBoard();
-					clearGamePads();
+					//resetBoard();
+					//clearGamePads();
 					count = 0;
 					return;
 				}
 				else if (count == 8)
 				{
 					currentPlayer.textContent = "It's a draw!!!";
-					resetBoard();
-					clearGamePads();
+					//resetBoard();
+					//clearGamePads();
 					count = 0;
 					return;
 				}
