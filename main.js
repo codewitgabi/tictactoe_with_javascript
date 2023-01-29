@@ -9,6 +9,10 @@ let gameBoard = [
 let winner = 0;
 let restartGame = document.getElementById("restart");
 
+document.querySelector("#comp").onclick = () => {
+    window.location = "./computer.html";
+}
+
 for (let i = 0; i < gamePads.length; i++) {
 	gamePads[i].addEventListener("click", function () {
 		if (this.textContent === "") {

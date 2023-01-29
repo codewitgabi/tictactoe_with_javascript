@@ -34,7 +34,9 @@
 	display: table;
 	clear: both;
 }
-#restart {
+#restart,
+#comp,
+#human {
 	float: right;
 	padding: 10px;
 	margin-right: 15%;
@@ -42,4 +44,10 @@
 	border: 2px solid #fff;
 	color: red;
 	border-radius: 5px;
+}
+#comp,
+#human {
+    float: left;
+    margin-right: 0;
+    margin-left: 15%;
 }
